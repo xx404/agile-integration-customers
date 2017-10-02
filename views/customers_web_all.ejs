@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Customers</title>
+  <link href="/../css/style.css" rel="stylesheet">
+  <script type="text/javascript" src="/../js/all.js"></script>
+	<meta name="viewport" content="initial-scale=1.0; maximum-scale=1.0; width=device-width;">
+</head>
+
+<body>
+
+<div class="table-title">
+	<br><br>
+</div>
+
+<table class="table-fill">
+  <thead>
+    <tr>
+      <th class="text-left">Customer ID</th>
+      <th class="text-left">VIP Status</th>
+      <th class="text-left">Balance</th>
+    </tr>
+  </thead>
+
+  <tbody class="table-hover">
+
+    <% if(data.length){
+
+     for(var i = 0;i < data.length;i++) { %>
+
+    <tr>
+        <td class="text-left"><%=data[i].customerID%></td>
+        <td class="text-left"><%=data[i].vipStatus%></td>
+        <td class="text-left"><%=data[i].balance%></td>
+    </tr>
+    <% }
+
+  }else{ %>
+    <tr>
+        <td colspan="3">No user</td>
+     </tr>
+  <% } %>
+
+
+  </tbody>
+</table>
+
+
+</body>
